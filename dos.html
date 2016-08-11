@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html>
+<head>
+	<title></title>
+   <script   src="js/jquery.min.js" ></script>
+  <script   src="js/jquery-ui.min.js" ></script>
+  <script   src="js/jquery.ui.touch-punch.min.js" ></script>
+   <script  src="js/OZGFunciones2.js"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<style >
+	.palabras{
+    position: absolute;
+    z-index: 3;
+    color: black;
+    border-style:  double  ; border-width: 1px ;
+ background-color: #73AEDF;
+
+ -moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border-radius: 15px 15px 15px 15px;
+box-shadow: 1px 5px 8px #828080; 
+-webkit-border-radius: 7px;
+-moz-box-shadow: 1px 5px 8px #828080;  
+  height: 10%;
+ width: 30%;
+ text-align: center;
+	}
+
+
+#panel{
+  position:  absolute;
+  left: 36%;
+  top: 27%;
+  width: 60%;
+  height: 70%;
+  z-index: 1;
+   border-radius: 37px 37px 37px 37px;
+-moz-border-radius: 37px 37px 37px 37px;
+-webkit-border-radius: 37px 37px 37px 37px;
+border: 0px solid #000000;
+background-color: #FEF9E7;
+-webkit-box-shadow: 10px 10px 11px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 11px -5px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 11px -5px rgba(0,0,0,0.75);
+visibility: hidden;
+
+}
+
+
+.contenidoPalabra{
+  position: absolute;
+ top: 25%;
+ left: 10%;
+ width: 80%;
+ height: 80%;
+ z-index: 6;
+
+}
+
+	</style>
+</head>
+<body onload="inicio()" onresize="ajustar()">
+  <img src="imagenes/fondo.png"  id="fondo" >
+
+<div id="consigna" style="top:14%;">Coloca la fórmula química de los siguientes hidruros según corresponda.</div>
+
+<div id="a1" class="cajas" style="left:5%; top:32%" ><div class="textoI" style="text-align:center;padding-top:7%;">FeH<span style="vertical-align:sub;">3</span></div></div>
+<div id="a2" class="cajas" style="left:5%; top:44%"> <div class="textoI"  style="text-align:center;padding-top:7%;">MgH<span style="vertical-align:sub;">2</span></div>  </div>
+<div id="a3" class="cajas" style="left:5%; top:56%"> <div  class="textoI" style="text-align:center;padding-top:9%;">AgH</div> </div>
+<div id="a4" class="cajas" style="left:5%; top:68%"><div  class="textoI" style="text-align:center;padding-top:7%;">AuH<span style="vertical-align:sub;">3</span></div>  </div>
+<div id="a5" class="cajas" style="left:5%; top:80%" >  <div  class="textoI"  style="text-align:center;padding-top:9%;">KH</div>  </div>
+
+<div>
+	<div class="palabras" style="left:60%; top:32%;" > <div class="contenidoPalabra noseleccionable">hidruro de hierro III</div> </div> 
+ <div id="n1" class="espacio"  style="left:40%; top:32%;" ></div>   
+ </div>
+
+ <div class="palabras" style="left:60%; top:44%;"> <div class="contenidoPalabra noseleccionable">hidruro de magnesio II</div> </div>
+ <div  id="n2" class="espacio"  style="left:40%; top:44%;"  ></div>
+
+ <div   class="palabras" style="left:60%; top:56%;"> <div class="contenidoPalabra noseleccionable">hidruro de plata</div></div>
+ <div  id="n3"class="espacio"   style="left:40%; top:56%;" ></div>
+
+ <div   class="palabras" style="left:60%; top:68%;"> <div class="contenidoPalabra noseleccionable">hidruro de oro III</div></div>
+ <div id="n4" class="espacio"  style="left:40%; top:68%;" ></div>
+
+
+ <div class="palabras" style="left:60%; top:80%;"><div class="contenidoPalabra noseleccionable">hidruro de potasio</div> </div>
+ <div id="n5" class="espacio"  style="left:40%; top:80%;"  > </div>
+
+<div id="panel">
+
+</div>
+
+ <script>
+ 
+
+function inicio(){ 
+ ajustar();
+sonidoFondo();
+}
+
+ function ajustar(){
+var alto=$(window).height();
+  var ancho=$(window).width();
+   var tamanio= ancho/45;
+
+   var vpalabras=document.getElementsByClassName("palabras");
+   var vtexto= document.getElementsByClassName("textoI");
+  var vconsigna= document.getElementById("consigna");
+   vconsigna.style.fontSize=""+(tamanio*1.2)+"px";
+  
+  var vd=document.getElementsByTagName("span");
+
+  for(var k=0; k<vd.length; k++){
+    vd[k].style.fontSize=""+(tamanio*0.8)+"pt";
+  }
+    
+
+   for(var i=0; i<vpalabras.length; i++){
+   	 vpalabras[i].style.fontSize=""+(tamanio*1.001)+"px";
+       vtexto[i].style.fontSize=""+(tamanio)+"pt";
+   }
+
+}
+
+
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'OptimaLTStd';
+    src: url('fonts/OptimaLTStd.eot');
+    src: url('fonts/OptimaLTStd.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OptimaLTStd.woff') format('woff'),
+         url('fonts/OptimaLTStd.ttf') format('truetype'),
+         url('fonts/OptimaLTStd.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+  font-family: 'OptimaLTStd';
+
+}
+
+#fondo{
+
+	left: 0%;
+	top: 0%;
+	position: absolute;
+	z-index: 1;
+ -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   width: 100%;
+   height: 100%;
+}
+#tabla{
+	position: absolute;
+	z-index: 2;
+	left: 15%;
+	top:20%;
+
+border-radius: 5px;
+}
+
+.alinear{
+z-index: 2;
+padding-left: 6%;
+ -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+
+.textoI{
+  /*
+position: absolute;
+padding-left: 10%;*/
+z-index: 2;
+
+
+ -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+#consigna{
+position: absolute;
+z-index: 2;
+left: 3%;
+top: 12%; 
+ /*font-weight: bold;*/
+ -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+ 
+}
+
+.cajas{
+position: absolute;
+color: white;
+background-color: aqua;
+background: #2a6e7a;
+z-index: 5;
+width: 16%;
+height: 8%;
+cursor: pointer;
+
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border-radius: 15px 15px 15px 15px;
+
+box-shadow: 1px 5px 8px #828080; 
+-webkit-border-radius: 7px;
+-moz-box-shadow: 1px 5px 8px #828080; 
+line-height: 20px;
+
+text-align: center;
+ 
+
+ }
+
+ 
+ .espacio{
+
+position: absolute;
+background-color: aqua;
+background: #fff;
+z-index: 4;
+width: 12%;
+height: 6%;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border-radius: 15px 15px 15px 15px;
+box-shadow: 1px 5px 8px #828080; 
+-webkit-border-radius: 7px;
+-moz-box-shadow: 1px 5px 8px #828080; 
+
+ }
+
+
+#flecha{
+  width: auto;
+  height: auto;
+  position: absolute;
+ cursor: pointer;
+  visibility: hidden;
+}
+.noseleccionable{
+
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}

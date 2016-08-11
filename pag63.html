@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html>
+<head>
+	<title></title>
+   <script   src="js/jquery.min.js" ></script>
+  <script   src="js/jquery-ui.min.js" ></script>
+  <script   src="js/jquery.ui.touch-punch.min.js" ></script>
+   <script  src="js/OZGFunciones.js"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<style >
+	.palabras{
+    position: absolute;
+    z-index: 3;
+    color: black;
+    border-style:  double  ; border-width: 1px ;
+ 
+ background-color: #73AEDF;
+
+ -moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border-radius: 15px 15px 15px 15px;
+
+box-shadow: 1px 5px 8px #828080; 
+-webkit-border-radius: 7px;
+-moz-box-shadow: 1px 5px 8px #828080;  
+  height: 10%;
+ width: 60%;
+ text-align: justify;
+	}
+  
+  .contenidoPalabra{
+  position: absolute;
+  left: 10%;
+  top: 8%;
+  width: 80%;
+  height: 80%; 
+  z-index: 8;
+
+  }
+
+
+	</style>
+</head>
+<body onload="inicio()" onresize="ajustar()">
+  <img src="imagenes/fondo.png"  id="fondo" >
+
+<div id="consigna">Arrastra cada palabra al espacio que corresponda.</div>
+
+<div id="a1" class="cajas" style="left:8%; top:18.5%" ><div class="textoI" style="text-align:center; padding-top:10%;">anhídridos </div></div>
+<div id="a2" class="cajas" style="left:25%; top:18.5%"> <div class="textoI"  style="text-align:center;padding-top:10%;">hidróxido </div>  </div>
+<div id="a3" class="cajas" style="left:42%; top:18.5%"> <div  class="textoI" style="text-align:center;padding-top:10%;">óxidos básicos </div> </div>
+<div id="a4" class="cajas" style="left:59%; top:18.5%"><div  class="textoI" style="text-align:center;padding-top:10%;">oxácido</div>  </div>
+<div id="a5" class="cajas" style="left:76%; top:18.5%" > <div  class="textoI"  style="text-align:center;padding-top:2%; line-height:100%;">hidruros metálicos</div>  </div>
+
+<div>
+	<div class="palabras" style="left:30%; top:30%;" ><div class="contenidoPalabra noseleccionable">Son compuestos binarios formados por un no metal con oxígenos</div> </div> 
+ <div id="n1" class="espacio"  style="left:10%; top:30%;" ></div>   
+ </div>
+
+ <div class="palabras" style="left:30%; top:42%;"> <div class="contenidoPalabra noseleccionable">Son compuestos terciarios que se obtienen al reaccionar un oxido metálico con agua</div></div>
+ <div  id="n2" class="espacio"  style="left:10%; top:42%;"  ></div>
+
+ <div   class="palabras" style="left:30%; top:54%;"> <div class="contenidoPalabra noseleccionable">Son compuestos binarios formados por un metal con el oxigeno</div></div>
+ <div  id="n3"class="espacio"   style="left:10%; top:54%;" ></div>
+
+ <div   class="palabras" style="left:30%; top:66%;"> <div class="contenidoPalabra noseleccionable">Compuestos combinados de un anhídrido con agua formándose un ácido</div></div>
+ <div id="n4" class="espacio"  style="left:10%; top:66%;" ></div>
+
+ <div class="palabras" style="left:30%; top:78%;"> <div class="contenidoPalabra noseleccionable">Estos compuestos tienen un metal más un hidrógeno</div></div>
+ <div id="n5" class="espacio"  style="left:10%; top:78%;"  > </div>
+
+<a href="dos.html"> <img id="flecha"src="imagenes/flecha.png" style="position:absolute; width:auto; height:auto; left:89%; top:88.5% ;z-index:3; visibility:hidden; "></a>
+ <script>
+ 
+
+function inicio(){ 
+ ajustar();
+sonidoFondo();
+
+}
+
+ function ajustar(){
+var alto=$(window).height();
+  var ancho=$(window).width();
+   var tamanio= ancho/45;
+
+   var vpalabras=document.getElementsByClassName("palabras");
+   var vtexto= document.getElementsByClassName("textoI");
+   $("#consigna").css("fontSize",""+tamanio*1.2+"px");
+   for(var i=0; i<vpalabras.length; i++){
+   	 vpalabras[i].style.fontSize=""+(tamanio*1.001)+"px";
+     //  vtexto[i].style.fontSize=""+(tamanio*0.8)+"pt";
+      
+   }
+
+   for(var t=0; t<vtexto.length; t++){
+    vtexto[t].style.fontSize= ""+(tamanio*0.8)+"pt";
+
+   }
+   
+
+}
+
+
+
+
+ </script>
+
+</body>
+</html>
